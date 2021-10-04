@@ -1,9 +1,9 @@
-const validator = require('validator')
+
+const chalk = require('chalk')
+const yargs = require('yargs')
 const getNotes = require('./notes.js')
 
-
-const msg = getNotes()
-console.log(msg)
-
-console.log(validator.isEmail('example.com'))
-console.log(validator.isURL('https://mead.io'))
+yargs.command({
+    command: 'add',
+    describe: 'add a new note'
+})
