@@ -21,8 +21,8 @@ const mapBoxLocation = 'Los Angeles'
 const mapBoxURL = mapBoxBaseURL + mapBoxLocation + '.json?access_token=' + config.mapBoxKey
 
 request({ url: mapBoxURL, json:true}, (error, response) => {
-    const lat = response.body.features[0].center[0];
-    const lon = response.body.features[0].center[1];
+    const lat = response.body.features[0].center[1];
+    const lon = response.body.features[0].center[0];
     console.log("For LA, the lat is: " + lat, " and the long is " + lon);
 })
 
